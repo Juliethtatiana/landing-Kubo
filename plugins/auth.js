@@ -4,13 +4,13 @@ export default defineNuxtPlugin(() => {
     (to) => {
       const userData = useOnboarding().getLoginUser
 
-      if (to.path === '/' && userData) {
+      /*  if (to.path === '/' && userData) {
         return navigateTo('/dashboard')
       }
 
       if (Object.entries(to.meta).length === 0 && !userData) {
         return navigateTo('/')
-      }
+      }*/
     },
     { global: true },
   )

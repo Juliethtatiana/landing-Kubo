@@ -36,17 +36,10 @@ const validateRol = (page) => {
 }
 
 onMounted(() => {
-  nextTick(() => {
-    if (userData) {
-      store.user = userData
-      actualPage.value = route.path
-    } else {
-      router.push(localePath('/'))
-    }
-  })
+  nextTick(() => {})
 })
 
-watch(
+/* watch(
   () => route.path,
   (newVal, oldVal) => {
     const route = validateRol(newVal)
@@ -55,7 +48,7 @@ watch(
       actualPage.value = newVal
     }
   },
-)
+) */
 </script>
 <template>
   <div class="app-wraper">
