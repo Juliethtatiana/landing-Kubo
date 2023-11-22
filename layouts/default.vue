@@ -8,6 +8,14 @@ const localePath = useLocalePath()
 
 const userData = store.getLoginUser
 
+const languages = ref([
+  {id:  1,
+  name:"Español"},
+  {id: 2,
+  name: "Ingles"}
+])
+const lang = ref({})
+
 // variables
 const items = ref([
   {
@@ -52,33 +60,17 @@ onMounted(() => {
 </script>
 <template>
   <div class="app-wraper">
-    <aside class="menu-aplication">
-      <div class="user-information">
-        <img src="/icons/ic_logo.svg" alt="logo" />
-        <p for="fullname">{{ userData?.fullname }}</p>
-      </div>
-      <div class="menu-content">
-        <nuxt-link
-          v-for="(item, index) in items"
-          :key="index"
-          class="item-menu"
-          :to="localePath(item.to)"
-        >
-          <img :src="`/icons/${item.img}.svg`" :alt="item.text" />
-          <span>{{ item.text }}</span>
-        </nuxt-link>
-      </div>
-    </aside>
     <main class="main-application">
       <nav class="nav-application">
-        <LayoutsDefaultBreadcrumb :page="actualPage" />
-        <div class="flex gap-2">
-          <img
-            src="/img/icons/ic_logout.svg"
-            alt="logout"
-            @click="openLogout = true"
-          />
+        <div class="flex gap-4">
+          <img src="/img/Logo_kubo.svg" alt="">
+          <Dropdown v-model="lang" :options="languages" optionLabel="name" placeholder="Lang " class="w-full md:w-14rem" />
         </div>
+        
+        <div>
+          <Button>Contactanos</Button>
+        </div>
+      
       </nav>
       <div class="content-application">
         <slot />

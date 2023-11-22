@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@pinia/nuxt',
     'nuxt-primevue',
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
   ],
 
   // primevue
@@ -64,6 +64,7 @@ export default defineNuxtConfig({
         'Paginator',
         'Menu',
         'Dialog',
+        'Dropdown',
       ],
     },
   },

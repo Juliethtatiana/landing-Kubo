@@ -7,9 +7,16 @@
 @import 'componets/otp-input';
 @import 'componets/toast';
 @import 'componets/table';
+@import 'componets/dropdown';
+@import 'componets/button';
 @import 'layouts/login';
 @import 'layouts/default';
 @import 'utilities/font';
+
+:root{
+  --background-color:#101019; 
+  color: white
+}
 
 body {
   padding: 0 !important;
@@ -27,4 +34,30 @@ button {
   &:focus {
     box-shadow: none !important;
   }
+}
+
+.landing{
+  .contact-form{
+    width: 350px;
+    h2{
+      font-family: 'Poppins-bold';
+      
+      font-size: 35px;
+      span{
+        color: #67CEFC;
+      }
+    }
+    .brand{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:2.5rem;
+      justify-content: center;
+      align-items: center;
+      img{
+        max-width: 140px;
+      }
+    }
+  }
+
+ 
 }
