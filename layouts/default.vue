@@ -9,10 +9,8 @@ const localePath = useLocalePath()
 const userData = store.getLoginUser
 
 const languages = ref([
-  {id:  1,
-  name:"Español"},
-  {id: 2,
-  name: "Ingles"}
+  { id: 1, name: 'Español' },
+  { id: 2, name: 'Ingles' },
 ])
 const lang = ref({})
 
@@ -46,31 +44,25 @@ const validateRol = (page) => {
 onMounted(() => {
   nextTick(() => {})
 })
-
-/* watch(
-  () => route.path,
-  (newVal, oldVal) => {
-    const route = validateRol(newVal)
-
-    if (route && oldVal !== newVal) {
-      actualPage.value = newVal
-    }
-  },
-) */
 </script>
 <template>
   <div class="app-wraper">
     <main class="main-application">
       <nav class="nav-application">
         <div class="flex gap-4">
-          <img src="/img/Logo_kubo.svg" alt="">
-          <Dropdown v-model="lang" :options="languages" optionLabel="name" placeholder="Lang " class="w-full md:w-14rem" />
+          <img src="/img/Logo_kubo.svg" alt="" />
+          <Dropdown
+            v-model="lang"
+            :options="languages"
+            optionLabel="name"
+            placeholder="Lang "
+            class="w-full md:w-14rem"
+          />
         </div>
-        
+
         <div>
           <Button>Contactanos</Button>
         </div>
-      
       </nav>
       <div class="content-application">
         <slot />

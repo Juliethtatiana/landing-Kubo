@@ -13,20 +13,23 @@
 @import 'layouts/default';
 @import 'utilities/font';
 
-:root{
-  --background-color:#101019; 
-  color: white
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #101019;
+  --secondary-color: #c4c7fd;
+  color: white;
 }
 
 body {
   padding: 0 !important;
   margin: 0 !important;
-  font-size: 16px;
-  scroll-behavior: smooth;
-  font-family: 'OpenSans-Regular';
+  font-family: 'Poppins-regular';
+  font-size: 20px;
   .p-component {
     font-size: 16px;
-    font-family: 'OpenSans-Regular';
   }
 }
 
@@ -36,28 +39,37 @@ button {
   }
 }
 
-.landing{
-  .contact-form{
+.landing {
+  .contact-brands {
     width: 350px;
-    h2{
+    h2 {
       font-family: 'Poppins-bold';
-      
+
       font-size: 35px;
-      span{
-        color: #67CEFC;
+      span {
+        color: #67cefc;
       }
     }
-    .brand{
+    .brand {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap:2.5rem;
+      gap: 2.5rem;
       justify-content: center;
       align-items: center;
-      img{
+      img {
         max-width: 140px;
       }
     }
   }
-
- 
+  .contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    label {
+      span {
+        color: var(--secondary-color);
+      }
+    }
+  }
 }
