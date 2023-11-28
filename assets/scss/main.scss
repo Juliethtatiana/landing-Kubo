@@ -20,7 +20,7 @@
 
 :root {
   --background-color: #101019;
-  --primary-color:#8967FC
+  --primary-color: #8967fc;
   --secondary-color: #c4c7fd;
   color: white;
 }
@@ -41,7 +41,7 @@ button {
   }
 }
 
-.btn{
+.btn {
   padding: 10px 31px;
   background: var(--secondary-color);
   width: fit-content;
@@ -58,13 +58,13 @@ button {
     font-size: 35px;
   }
 
-  .blue{
+  .blue {
     color: #67cefc;
   }
 
   .contact-brands {
     width: 350px;
-   
+
     .brand {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -87,11 +87,22 @@ button {
       }
     }
   }
-  .about{
+  .about {
     margin-top: 164px;
-   
-    h2{
+    margin-bottom: 60px;
+
+    h2 {
       margin: 20px 0px;
+    }
+  }
+  .expert {
+    margin-top: 160px;
+    h2 {
+      font-size: 45px;
+    }
+    p {
+      font-family: 'Poppins-Medium';
+      font-size: 28px;
     }
   }
 }
