@@ -15,7 +15,7 @@ const countries = ref([
       <label for="name">Apellidos <span>*</span></label>
       <InputText id="name" v-model="name" aria-describedby="name-help" />
     </div>
-    <div class="flex">
+    <div class="flex gap-5">
       <div>
         <label for="country">País <span>*</span></label>
         <Dropdown
@@ -31,5 +31,7 @@ const countries = ref([
         <InputText id="phone" v-model="phone" />
       </div>
     </div>
+    <recaptcha />
+    <Button type="submit" class="btn">Enviar</Button>
   </div>
 </template>

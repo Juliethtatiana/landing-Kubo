@@ -35,6 +35,10 @@ export default defineNuxtConfig({
       API_BASE_URL: process.env.API_URL,
       SHORT_NAME: process.env.SHORT_NAME,
     },
+
+    recaptcha: {
+      siteKey: '6LeijRwpAAAAAL_Toxj_FcqIxeVhxgUi4vEmMwY2',
+    },
   },
 
   // css
@@ -87,5 +91,12 @@ export default defineNuxtConfig({
     lazy: true,
     langDir: 'lang/',
     defaultLocale: 'es',
+  },
+
+  grecaptcha: {
+    hideBadge: true,
+    mode: 'base',
+    siteKey: '',
+    version: 3,
   },
 })

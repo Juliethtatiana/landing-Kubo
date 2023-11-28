@@ -9,6 +9,7 @@
 @import 'componets/table';
 @import 'componets/dropdown';
 @import 'componets/button';
+@import 'componets/card';
 @import 'layouts/login';
 @import 'layouts/default';
 @import 'utilities/font';
@@ -19,6 +20,7 @@
 
 :root {
   --background-color: #101019;
+  --primary-color:#8967FC
   --secondary-color: #c4c7fd;
   color: white;
 }
@@ -39,17 +41,30 @@ button {
   }
 }
 
+.btn{
+  padding: 10px 31px;
+  background: var(--secondary-color);
+  width: fit-content;
+  color: #101019;
+  font-family: 'OpenSans-Bold';
+  font-size: 20px;
+  border-radius: 10px;
+}
+
 .landing {
+  h2 {
+    font-family: 'Poppins-bold';
+
+    font-size: 35px;
+  }
+
+  .blue{
+    color: #67cefc;
+  }
+
   .contact-brands {
     width: 350px;
-    h2 {
-      font-family: 'Poppins-bold';
-
-      font-size: 35px;
-      span {
-        color: #67cefc;
-      }
-    }
+   
     .brand {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -70,6 +85,13 @@ button {
       span {
         color: var(--secondary-color);
       }
+    }
+  }
+  .about{
+    margin-top: 164px;
+   
+    h2{
+      margin: 20px 0px;
     }
   }
 }

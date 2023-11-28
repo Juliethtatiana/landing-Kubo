@@ -1,0 +1,30 @@
+
+    .service-card{
+        width: fit-content;
+        & div:nth-child(2n+1){
+            margin-left: 173px;
+        }
+        & div:nth-child(2n){
+            margin-right: 173px;
+        }
+        display: flex;
+        gap: 102px;
+        div{
+            max-width: 368px;
+            h3{
+                font-family: 'Poppins-Bold';
+                font-size: 28px;
+            }
+            p{
+                font-family: 'Poppins-Regular';
+                font-size: 20px;
+        
+            }
+            span{
+                font-family: 'Poppins-Bold';
+                color: var(--primary-color)
+            };
+        }
+       
+    }
+
