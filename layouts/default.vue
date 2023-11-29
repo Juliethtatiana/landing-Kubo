@@ -66,7 +66,35 @@ onMounted(() => {
       </nav>
       <div class="content-application">
         <slot />
+       
       </div>
+      
+      <footer class="footer">
+        <div class="flex">
+          <div>
+          <img src="/img/Logo_kubo.svg" alt="" />
+        <h2>Empieza tu proyecto con Kubo</h2>
+        </div>
+        <div class="flex">
+          <div>
+            <p>Contactanos</p>
+            <div class="flex">
+              <img src="" alt="">
+              <p>+57 (601) 5800567</p>
+            </div>
+          </div>
+        </div>
+        </div>
+       
+          <div class="flex gap-2">
+            <img src="/img/top.png" alt="">
+            <img src="/img/Escudo.png" alt="">
+            <img src="/img/Escudo 2.png" alt="">
+            <img src="/img/Escudo 3.png" alt="">
+            <img src="/img/Clucht.png" alt="">
+          </div>
+        </footer>
+    
     </main>
     <LayoutsLoginLogout :dialog="openLogout" @closeModal="openLogout = false" />
   </div>

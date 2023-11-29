@@ -70,6 +70,7 @@ export default defineNuxtConfig({
         'Dialog',
         'Dropdown',
         'Carousel',
+        'Checkbox',
       ],
     },
   },

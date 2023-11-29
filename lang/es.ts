@@ -79,16 +79,7 @@ export default {
         'Ocurrió un error en el servidor. Intente nuevamente más tarde',
     },
   },
-  text: {
-    login: 'Por favor digita tu correo electrónico',
-    forgotPassword:
-      'Por favor ingresa tu correo, enviaremos un código para que puedas restablecer tu contraseña.',
-    validateCode: 'Por favor ingresa el código que enviamos a: ',
-    changePassword:
-      'La contraseña debe contener 8 caracteres alfanuméricos, una mayúscula y una minúscula.',
-    logout: '¿Seguro que desea cerrar sesión?',
-    code: 'Puedes solicitar otro código en {data} segundos.',
-  },
+
   table: {
     empty: {
       title: 'Lo sentimos',
@@ -121,5 +112,53 @@ export default {
     country: 'Países',
     language: 'Idiomas',
     help: 'Ayuda',
+  },
+  text: {
+    brands: {
+      firstTitle: {
+        one: 'Da el primer paso para crear tu app,',
+        two: 'Ellos ya lo hicieron:',
+      },
+      about: {
+        title: 'Da el primer paso para crear tu app,',
+        subtitle: '¿Qué ofrecemos?',
+      },
+      services: {
+        first: {
+          title: 'Desarrollo de apps multiplataforma y nativas',
+          text: {
+            one: ' Desarrollamos aplicaciones móviles que generan',
+            span: 'ventajas competitivas en el mercado',
+          },
+        },
+        second: {
+          title: 'Diseño UX/ UI',
+          text: {
+            one: 'Creamos ',
+            span: 'experiencias únicas ',
+            two: 'para que los usuarios conecten con tu negocio',
+          },
+        },
+        third: {
+          title: 'QA Testing',
+          text: {
+            one: 'Hacemos las pruebas necesarias para que tu producto digital, salga con',
+            span: 'los más altos estándares de calidad',
+          },
+        },
+      },
+      expert: {
+        title: '¿Por qué escoger Kubo?',
+        text1: 'Más de 15 años de experiencia',
+        text2: '150 proyectos realizados',
+        text3: 'Modelos de pago especiales',
+      },
+      clients: {
+        title: 'Estos son algunos de los clientes que ',
+        strongTitle: 'han confiado en nosotros',
+        text: 'Trabajamos junto a ellos para dar vida a sus apps móviles y sitios web. ',
+        instructions: '¡Selecciona y descubre quienes nos eligieron!',
+      },
+    },
   },
 }

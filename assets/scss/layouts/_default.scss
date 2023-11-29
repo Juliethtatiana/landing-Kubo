@@ -31,8 +31,11 @@
     }
 
     .content-application {
-      height: calc(100vh - 90px);
+     // height: calc(100vh - 90px);
       padding: 100px 96px;
     }
+  }
+  .footer{
+    padding: 43px 49px;
   }
 }
