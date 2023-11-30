@@ -162,6 +162,15 @@ export default {
         startups: 'Startups',
         government: 'Gobierno',
       },
+      news: {
+        title: 'Kubo news',
+        strongText: '¿Qué hay de nuevo?',
+        text: ' Descubre aquí las últimas maravillas del mundo digital',
+      },
+      contact: {
+        title: '¿Listo para dar vida a tu idea?',
+        subtitle: ' Creamos apps y damos vida a negocios exitosos',
+      },
     },
   },
 }

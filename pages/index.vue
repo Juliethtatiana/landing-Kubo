@@ -96,7 +96,7 @@ const imgBrands = ref([
         </div>
       </div>
     </div>
-    <div class="clients">
+    <div class="clients section">
       <h4>{{t('text.brands.clients.title')}}<strong>{{t('text.brands.clients.strongTitle') }}</strong></h4>
       <div>
         <p>{{t('text.brands.clients.text') }}</p>
@@ -127,18 +127,30 @@ const imgBrands = ref([
       </div>
 
     </div>
-    <div class="tw-mt-[178px]">
+    <div class="news section">
+
+      <h4><strong>{{t('text.brands.news.title') }}</strong></h4>
+      <p><strong>{{t('text.brands.news.strongText') }}</strong></p>
+      <p>{{t('text.brands.news.text') }}</p>
+      <Carousel class="tw-mt-[128px] w-full" :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+    <template #item>
+        <GeneralCardNews></GeneralCardNews>
+    </template>
+</Carousel>
+
+    </div>
+    <div class="tw-mt-[178px] contact">
       <FormsContactForm>
       <template #information>
-        <div class="contact-brands">
+        <div>
           <h2 class="blue">
-            ¿Listo para dar vida a tu idea?
+            {{t('text.brands.contact.title') }}
             
           </h2>
           <h3>
-            Creamos apps y damos vida a negocios exitosos
+            {{t('text.brands.contact.subtitle') }}
           </h3>
-          <img src="/img/binoculares_servicios.png" alt="">
+          <img src="/img/binoculares_servicios.png" alt="" >
         </div>
       </template>
     </FormsContactForm>
