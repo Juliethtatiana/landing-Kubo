@@ -9,7 +9,7 @@ const router = useRouter()
 
 const loading = useLoading(ref(false))
 
-const products = ref(['KPMG.png','Herbalife.png'])
+const products = ref(['KPMG.png','Herbalife.png','Sura.svg', 'Bayer.svg'])
 
 const imgBrands = ref([
   'Laika.svg',
@@ -103,29 +103,45 @@ const imgBrands = ref([
       <p class="blue">{{t('text.brands.clients.instructions') }}</p>
 
       </div>
-           <div>
-            <div class="card flex flex-wrap justify-content-center gap-3">
-    <div class="flex align-items-center">
-        <Checkbox v-model="pizza" inputId="ingredient1" name="pizza" value="Cheese" />
-        <label for="ingredient1" class="ml-2"> Cheese </label>
+           <div class="w-full">
+            <div class="card flex flex-wrap justify-content-center tw-gap-[122px]">
+    <div class="general-checkbox flex align-items-center">
+        <Checkbox v-model="brand" inputId="companies" name="companies" value="companies" />
+        <label for="companies" class="ml-2"> {{ t('text.brands.clients.companies') }} </label>
     </div>
-    <div class="flex align-items-center">
-        <Checkbox v-model="pizza" inputId="ingredient2" name="pizza" value="Mushroom" />
-        <label for="ingredient2" class="ml-2"> Mushroom </label>
+    <div class="general-checkbox flex align-items-center">
+        <Checkbox v-model="brand" inputId="startups" name="startups" value="startups" />
+        <label for="startups" class="ml-2"> {{ t('text.brands.clients.startups') }} </label>
     </div>
-    <div class="flex align-items-center">
-        <Checkbox v-model="pizza" inputId="ingredient3" name="pizza" value="Pepper" />
-        <label for="ingredient3" class="ml-2"> Pepper </label>
+    <div class="general-checkbox flex align-items-center">
+        <Checkbox v-model="brand" inputId="government" name="government" value="government" />
+        <label for="government" class="ml-2"> {{ t('text.brands.clients.government') }} </label>
     </div>
     
 </div>
-<Carousel :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
+<Carousel class="tw-mt-[128px] w-full" :value="products" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptions">
     <template #item="slotProps">
         <img :src="'/img/'+ slotProps.data" alt="">
     </template>
 </Carousel>
       </div>
 
+    </div>
+    <div class="tw-mt-[178px]">
+      <FormsContactForm>
+      <template #information>
+        <div class="contact-brands">
+          <h2 class="blue">
+            ¿Listo para dar vida a tu idea?
+            
+          </h2>
+          <h3>
+            Creamos apps y damos vida a negocios exitosos
+          </h3>
+          <img src="/img/binoculares_servicios.png" alt="">
+        </div>
+      </template>
+    </FormsContactForm>
     </div>
   </div>
 </template>

@@ -1,0 +1,20 @@
+.general-checkbox{
+    label{
+        color:var(--blue-color);
+        font-family: 'Poppins-medium';
+        font-size:20px;
+    }
+    .p-checkbox{
+        .p-checkbox-box{
+            border-radius: 50%;
+            border:2px solid var(--blue-color);
+            background: transparent
+
+        }
+
+    }
+    .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+        background: var(--blue-color);
+        box-shadow: none;
+    }
+}
