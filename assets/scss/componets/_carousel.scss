@@ -34,9 +34,6 @@
   .p-carousel-prev.p-link {
     display: none;
   }
-  .p-carousel-items-container {
-    gap: 20px;
-  }
 
   .p-carousel-indicators {
     margin-top: 3rem;
@@ -55,4 +52,8 @@
 }
 .p-carousel-content {
   overflow: visible;
+}
+.p-carousel-item {
+  display: flex;
+  justify-content: center;
 }

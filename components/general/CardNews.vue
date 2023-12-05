@@ -1,13 +1,21 @@
-<template>
-    <div class="news-card">
-        <div>
-            <h3>Los Avances de la Inteligencia Artificial</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
- 
-    </div>
-    <div >
-        <Button class="btn">Enterate</Button>
+<script setup>
+const props = defineProps({
+  content: Object,
+})
 
+onMounted(() => {})
+</script>
+
+<template>
+  <div class="news-card">
+    <div>
+      <h3>{{ content.title }}</h3>
+      <p>
+        {{ content.content }}
+      </p>
     </div>
-      </div>
+    <div>
+      <Button class="btn">Enterate</Button>
+    </div>
+  </div>
 </template>

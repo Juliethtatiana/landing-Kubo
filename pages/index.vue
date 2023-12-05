@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import * as yup from 'yup'
+import { useNews } from '~/stores/news'
 
 const store = useOnboarding()
 const { t } = useI18n()
 const localePath = useLocalePath()
 const router = useRouter()
+const storeNews = useNews()
 
 const loading = useLoading(ref(false))
 
@@ -19,6 +21,27 @@ const imgBrands = ref([
   'Banclic.svg',
   'Bericool.svg',
 ])
+const responsiveOptions = ref([
+  {
+    breakpoint: '1400px',
+    numVisible: 3,
+    numScroll: 1,
+  },
+  {
+    breakpoint: '1199px',
+    numVisible: 2,
+    numScroll: 1,
+  },
+  {
+    breakpoint: '767px',
+    numVisible: 1,
+    numScroll: 1,
+  },
+])
+
+onMounted(async () => {
+  await storeNews.fetchNews()
+})
 </script>
 <template>
   <div class="landing">
@@ -43,7 +66,6 @@ const imgBrands = ref([
               :value="imgBrands"
               :numVisible="2"
               :numScroll="1"
-              :responsiveOptions="responsiveOptions"
             >
               <template #item="slotProps">
                 <img :src="'/img/' + slotProps.data" alt="" />
@@ -179,15 +201,20 @@ const imgBrands = ref([
         <strong>{{ t('text.brands.news.strongText') }}</strong>
       </p>
       <p>{{ t('text.brands.news.text') }}</p>
+
       <Carousel
         class="tw-mt-[128px] w-full"
-        :value="products"
+        v-if="storeNews.news.length > 0"
+        :value="storeNews.news"
         :numVisible="3"
-        :numScroll="3"
+        :numScroll="1"
         :responsiveOptions="responsiveOptions"
       >
-        <template #item>
-          <GeneralCardNews></GeneralCardNews>
+        <template #item="slotProps">
+          <GeneralCardNews
+            class="w-full"
+            :content="slotProps.data"
+          ></GeneralCardNews>
         </template>
       </Carousel>
     </div>
