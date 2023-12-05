@@ -24,18 +24,31 @@ const imgBrands = ref([
   <div class="landing">
     <FormsContactForm>
       <template #information>
-        <div class="contact-brands">
+        <div class="contact-brands md:w-[350px]">
           <h2>
             {{ t('text.brands.firstTitle.one') }}
             <span class="blue"> {{ t('text.brands.firstTitle.two') }}</span>
           </h2>
-          <div class="brand">
+          <div class="brand md:tw-grid tw-hidden">
             <img
               v-for="(img, index) in imgBrands"
               :key="index"
               :src="'/img/' + img"
               alt=""
             />
+          </div>
+          <div class="no-buttons-carousel">
+            <Carousel
+              class="tw-mt-[40px] w-full md:tw-hidden"
+              :value="imgBrands"
+              :numVisible="3"
+              :numScroll="3"
+              :responsiveOptions="responsiveOptions"
+            >
+              <template #item="slotProps">
+                <img :src="'/img/' + slotProps.data" alt="" />
+              </template>
+            </Carousel>
           </div>
         </div>
       </template>
@@ -108,7 +121,9 @@ const imgBrands = ref([
         <p class="blue">{{ t('text.brands.clients.instructions') }}</p>
       </div>
       <div class="w-full">
-        <div class="card flex flex-wrap justify-content-center tw-gap-[122px]">
+        <div
+          class="card flex flex-wrap justify-content-center tw-gap-[24px] md:tw-gap-[122px]"
+        >
           <div class="general-checkbox flex align-items-center">
             <Checkbox
               v-model="brand"
@@ -156,7 +171,7 @@ const imgBrands = ref([
         </Carousel>
       </div>
     </div>
-    <div class="news section">
+    <div class="no-buttons-carousel section">
       <h4>
         <strong>{{ t('text.brands.news.title') }}</strong>
       </h4>

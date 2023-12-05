@@ -71,10 +71,9 @@ button {
   }
 
   .contact-brands {
-    width: 350px;
+    width: 100%;
 
     .brand {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2.5rem;
       justify-content: center;

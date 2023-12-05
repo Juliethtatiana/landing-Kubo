@@ -19,14 +19,13 @@ const countries = ref([
           <label for="name">Apellidos <span>*</span></label>
           <InputText id="name" v-model="name" aria-describedby="name-help" />
         </div>
-        <div class="flex tw-flex-col md:tw-flex-row gap-5">
+        <div class="flex tw-flex-col sm:tw-flex-row gap-5">
           <div class="flex flex-column gap-2">
             <label for="country">País <span>*</span></label>
             <Dropdown
               v-model="country"
               :options="countries"
               optionLabel="name"
-              placeholder="País "
               class="w-full md:w-14rem"
             />
           </div>
