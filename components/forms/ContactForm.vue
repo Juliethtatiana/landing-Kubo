@@ -6,7 +6,7 @@ const countries = ref([
 ])
 </script>
 <template>
-  <div class="tw-flex tw-gap-40">
+  <div class="md:tw-flex tw-gap-40">
     <slot name="information" />
 
     <div class="w-full">
@@ -19,8 +19,8 @@ const countries = ref([
           <label for="name">Apellidos <span>*</span></label>
           <InputText id="name" v-model="name" aria-describedby="name-help" />
         </div>
-        <div class="flex gap-5">
-          <div>
+        <div class="flex tw-flex-col md:tw-flex-row gap-5">
+          <div class="flex flex-column gap-2">
             <label for="country">País <span>*</span></label>
             <Dropdown
               v-model="country"
@@ -35,7 +35,6 @@ const countries = ref([
             <InputText id="phone" v-model="phone" />
           </div>
         </div>
-        <recaptcha />
         <Button type="submit" class="btn">Enviar</Button>
       </div>
     </div>

@@ -31,12 +31,17 @@
     }
 
     .content-application {
-     // height: calc(100vh - 90px);
+      // height: calc(100vh - 90px);
       padding: 100px 96px;
     }
   }
-  .footer{
+  .footer {
     padding: 43px 49px;
     background: var(--secondary-dark-color);
+    .subtitle {
+      font-family: 'Poppins-SemiBold';
+      width: fit-content;
+      border-bottom: 2px solid white;
+    }
   }
 }

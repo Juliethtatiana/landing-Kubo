@@ -113,6 +113,10 @@ export default {
     language: 'Idiomas',
     help: 'Ayuda',
   },
+  link: {
+    terms: 'Términos y condiciones',
+  },
+
   text: {
     brands: {
       firstTitle: {
@@ -171,6 +175,15 @@ export default {
         title: '¿Listo para dar vida a tu idea?',
         subtitle: ' Creamos apps y damos vida a negocios exitosos',
       },
+    },
+    footer: {
+      copyright:
+        '© 2023 Kubo - Agencia digital de desarrollo de aplicaciones móviles, Colombia.',
+      start: 'Empieza tu proyecto con Kubo',
+      contactUs: 'Contactanos',
+      phone: '+57 (601) 5800567',
+      visit: 'Visitanos',
+      direction: 'Carrera 49A Nº 93-39 La Castellana',
     },
   },
 }

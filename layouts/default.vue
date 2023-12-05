@@ -66,35 +66,46 @@ onMounted(() => {
       </nav>
       <div class="content-application">
         <slot />
-       
       </div>
-      
-      <footer class="footer">
-        <div class="flex">
-          <div>
-          <img src="/img/Logo_kubo.svg" alt="" />
-        <h2>Empieza tu proyecto con Kubo</h2>
+
+      <footer
+        class="footer tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-[40px]"
+      >
+        <div class="flex flex-column gap-4">
+          <img src="/img/Logo_kubo.svg" alt="" class="tw-max-w-[250px]" />
+          <h2>{{ $t('text.footer.start') }}</h2>
         </div>
-        <div class="flex">
-          <div>
-            <p>Contactanos</p>
-            <div class="flex">
-              <img src="" alt="">
-              <p>+57 (601) 5800567</p>
-            </div>
+        <div class="flex flex-column gap-4">
+          <div class="subtitle">
+            <p>{{ $t('text.footer.contactUs') }}</p>
           </div>
-        </div>
-        </div>
-       
+
           <div class="flex gap-2">
-            <img src="/img/top.png" alt="">
-            <img src="/img/Escudo.png" alt="">
-            <img src="/img/Escudo 2.png" alt="">
-            <img src="/img/Escudo 3.png" alt="">
-            <img src="/img/Clucht.png" alt="">
+            <img src="/icons/ic_phone_contact.png" alt="" />
+            <p class="purple">{{ $t('text.footer.phone') }}</p>
           </div>
-        </footer>
-    
+        </div>
+        <div class="flex flex-column gap-4">
+          <div class="subtitle">
+            <p>{{ $t('text.footer.visit') }}</p>
+          </div>
+          <div class="flex">
+            <p>{{ $t('text.footer.direction') }}</p>
+          </div>
+        </div>
+
+        <div class="flex tw-gap-[10px] tw-max-h-[69px] w-full">
+          <img src="/img/top.png" alt="" />
+          <img src="/img/Escudo.png" alt="" />
+          <img src="/img/Escudo 2.png" alt="" />
+          <img src="/img/Escudo 3.png" alt="" />
+          <img src="/img/Clucht.png" alt="" class="tw-object-contain" />
+        </div>
+        <div class="w-full tw-text-right xl:tw-col-span-2 md:tw-col-start-3">
+          <p>{{ $t('text.footer.copyright') }}</p>
+          <a href="#" class="tw-underline">{{ $t('link.terms') }}</a>
+        </div>
+      </footer>
     </main>
     <LayoutsLoginLogout :dialog="openLogout" @closeModal="openLogout = false" />
   </div>
