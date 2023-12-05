@@ -41,8 +41,8 @@ const imgBrands = ref([
             <Carousel
               class="tw-mt-[40px] w-full md:tw-hidden"
               :value="imgBrands"
-              :numVisible="3"
-              :numScroll="3"
+              :numVisible="2"
+              :numScroll="1"
               :responsiveOptions="responsiveOptions"
             >
               <template #item="slotProps">
